@@ -15,6 +15,8 @@ const numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
 //verifico se il numero inserito è tra 1 e 5
 if((numeroUtente < 1)||(numeroUtente > 5) ){
     alert('Numero non valido!! RIPROVA.');
+}else if(isNaN(numeroUtente)){
+    alert('Non hai inserito un numero');
 }
 
 // il pc inserisce il suo numero
@@ -28,6 +30,13 @@ console.log('La somma dei due numeri è:' + somma);
 // Visualizziamo il risultato della somma 
 let risultato = calcolaPariDispari(somma);
 console.log('Il risultato è:' + risultato);
+
+//Vediamo il vincitore
+if(risultato === sceltaUtente){
+    console.log("L'utente ha vinto");
+}else{
+    console.log("Il computer ha vinto");
+}
 
 
 // genero la funzione random per il pc (numeri da 1 a 5)
